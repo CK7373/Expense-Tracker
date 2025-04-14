@@ -1,43 +1,164 @@
-.Header{
-    font-family: Arial, Helvetica, sans-serif;
-    color:darkblue;
-}
-
-.border{
-    margin: 30px;
-    width: 300px;
-    height:auto;
-    border: 2px solid darkblue; /* Added border width and style */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    box-sizing: border-box; /* Ensures padding is included in the total width/height */
-    border-radius: 5%;
-    
-}
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00008B
+  }
 
-.Form{
-    display: flex;/* Use flexbox for layout */
-    flex-direction: column; /* Stack inputs vertically */
-    
-}
-input {
-    margin-bottom: 10px; /* Space between inputs */
-    padding: 5px; /* Padding inside inputs */
-    width: 100%; /* Make inputs take full width of the container */
-    box-sizing: border-box; /* Include padding in width */
-}
+  input[type="text"] {
+    width: 100%; 
+    max-width: 400px;
+    padding: 12px 40px 12px 15px;
+    margin: 20px auto; 
+    display: block; 
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1; 
+    border-radius: 6px; 
+    font-size: 16px; 
+    font-family: Arial, sans-serif; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); 
+    transition: all 0.3s ease; 
+    box-sizing: border-box; 
+  }
+  
 
-button {
-    width:100%;
-    padding: 8px; /* Padding for the button */
-    background-color: darkblue; /* Button background color */
-    color: white; /* Button text color */
-    border: none; /* Remove default border */
-    cursor: pointer; /* Change cursor on hover */
-    
-}
+  input[type="text"]::placeholder {
+    color: #999; 
+    font-style: italic; 
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #00008B; 
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3); 
+  }
 
-
-
-.table{
-    margin: 100px;
-}
+  .form {
+    background-color: #ffffff; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 10px; 
+    padding: 25px; 
+    width: 100%; 
+    max-width: 400px; 
+    margin: 20px auto; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  .form input,
+  .form select,
+  .form button {
+    width: 100%; 
+    padding: 12px; 
+    margin-bottom: 15px; 
+    border: 1px solid #d1d1d1; 
+    border-radius: 6px; 
+    font-size: 16px; 
+    box-sizing: border-box; 
+  }
+  
+  
+  .form input:focus,
+  .form select:focus {
+    outline: none;
+    border-color: #4a90e2; 
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3); 
+  }
+  
+ 
+  .form input::placeholder {
+    color: #999; 
+    font-style: italic;
+  }
+  
+ 
+  .form select {
+    appearance: none; 
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")
+      no-repeat right 10px center; 
+    background-color: #fff; 
+    cursor: pointer;
+  }
+  
+  
+  .form button {
+    background-color: #00008B; 
+    color: white; 
+    border: none; 
+    padding: 12px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+  }
+  
+  .form button:hover {
+    background-color: #357abd; 
+  }
+  
+  
+  .form input[type="number"],
+  .form input[type="date"] {
+    appearance: textfield;
+  }
+  
+  .form input[type="number"]::-webkit-inner-spin-button,
+  .form input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  
+  @media (max-width: 500px) {
+    .form {
+      padding: 15px; 
+      max-width: 100%; 
+    }
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .expense-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .expense-table th,
+  .expense-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .expense-table th {
+    background-color: #f4f4f4;
+    cursor: pointer;
+  }
+  
+  .expense-table th:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .delete-btn {
+    padding: 6px 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333;
+  }
